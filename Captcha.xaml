@@ -1,0 +1,382 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Captcha" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:rab="clr-namespace:RCA.Activities.Browser;assembly=RCA.Activities.Browser" xmlns:rac="clr-namespace:RCA.Activities.Core;assembly=RCA.Activities.Core" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="browser" Type="InOutArgument(rab:Browser)" />
+    <x:Property Name="arrConfig" Type="InArgument(njl:JToken)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>476.8,459.2</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Captcha_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>RCA.Activities.Browser</x:String>
+      <x:String>OpenQA.Selenium</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>RCA.Activities.Browser</AssemblyReference>
+      <AssemblyReference>WebDriver</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>RCA.Activities.Core</AssemblyReference>
+      <AssemblyReference>RCA.Activities.OCR</AssemblyReference>
+      <AssemblyReference>Aka.RPA.Python</AssemblyReference>
+      <AssemblyReference>RCA.Activities.Excel</AssemblyReference>
+      <AssemblyReference>RCA.Activities.Java</AssemblyReference>
+      <AssemblyReference>RCA.Activities.Word</AssemblyReference>
+      <AssemblyReference>RCA.Activities.IE</AssemblyReference>
+      <AssemblyReference>RCA.Activities.Windows</AssemblyReference>
+      <AssemblyReference>RCA.Activities.Mail</AssemblyReference>
+      <AssemblyReference>RCA.Activities.GSuite</AssemblyReference>
+      <AssemblyReference>RCA.Activities.FTP</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>RCA.Activities.SAP</AssemblyReference>
+      <AssemblyReference>RCA.Activities.ActiveDirectory</AssemblyReference>
+      <AssemblyReference>RCA.Activities.Catia</AssemblyReference>
+      <AssemblyReference>RCA.Activities.PCOMM</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Captcha" sap:VirtualizedContainerService.HintSize="436.8,379.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <rab:BrowserScope TimeoutMS="{x:Null}" Browser="[browser]" BrowserName="Chrome" ContinueOnError="False" DisplayName="[085566842] Browser Scope(B)" sap:VirtualizedContainerService.HintSize="414.4,254.4" sap2010:WorkflowViewState.IdRef="BrowserScope_1" QuitBrowserOnCompletedOrFaulted="False" UiBrowser="[browser]">
+      <rab:BrowserScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="[085573545] Do" sap:VirtualizedContainerService.HintSize="222.4,177.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="[672919560] Check Captcha" sap:VirtualizedContainerService.HintSize="510.4,3384" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="injectContent" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <rac:LogMessage DisplayName="[672929534] Log Message" sap:VirtualizedContainerService.HintSize="488,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Wait to get captcha&quot;]" />
+              <Assign DisplayName="[672931521] Assign" sap:VirtualizedContainerService.HintSize="488,60.8" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[injectContent]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">
+                    <Literal x:TypeArguments="x:String" Value="" />
+                  </InArgument>
+                </Assign.Value>
+              </Assign>
+              <rab:InjectJs Browser="{x:Null}" LastElement="{x:Null}" LastLocator="{x:Null}" ContinueOnError="False" DisplayName="[791236721] Inject Javascript(B)" sap:VirtualizedContainerService.HintSize="488,59.2" sap2010:WorkflowViewState.IdRef="InjectJs_4" ScriptCode="[&quot;function getData(){try {var elephant = document.querySelector('img');var imgCanvas = document.createElement(&quot;&quot;canvas&quot;&quot;),imgContext = imgCanvas.getContext(&quot;&quot;2d&quot;&quot;);imgCanvas.width = elephant.width;imgCanvas.height = elephant.height;imgContext.drawImage(elephant, 0, 0, elephant.width, elephant.height); return imgCanvas.toDataURL(&quot;&quot;image/png&quot;&quot;);} catch (e) {return '';}} return getData();&quot;]" ScriptOutput="[injectContent]" />
+              <rac:CommentOut DisplayName="[807573551] Comment Out" sap:VirtualizedContainerService.HintSize="488,256" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                <rac:CommentOut.Body>
+                  <Sequence DisplayName="[807575052] Ignored Activities" sap:VirtualizedContainerService.HintSize="222.4,177.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <DoWhile DisplayName="[807578549] Do While" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="DoWhile_1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <DoWhile.Condition>[injectContent.Trim() = ""]</DoWhile.Condition>
+                      <Sequence DisplayName="[807603080] Sequence" sap:VirtualizedContainerService.HintSize="438,684" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="injectContent" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Delay DisplayName="[807605074] Delay" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="416,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                        <rab:InjectJs Browser="{x:Null}" LastElement="{x:Null}" LastLocator="{x:Null}" ContinueOnError="False" DisplayName="[807607073] Inject Javascript(B)" sap:VirtualizedContainerService.HintSize="416,59" sap2010:WorkflowViewState.IdRef="InjectJs_1" ScriptCode="[&quot;function getData(){try {var elephant = document.querySelector('img');var imgCanvas = document.createElement(&quot;&quot;canvas&quot;&quot;),imgContext = imgCanvas.getContext(&quot;&quot;2d&quot;&quot;);imgCanvas.width = elephant.width;imgCanvas.height = elephant.height;imgContext.drawImage(elephant, 0, 0, elephant.width, elephant.height); return imgCanvas.toDataURL(&quot;&quot;image/png&quot;&quot;);} catch (e) {return '';}} return getData();&quot;]" ScriptOutput="[injectContent]" />
+                        <rac:CommentOut DisplayName="[807609074] Comment Out" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                          <rac:CommentOut.Body>
+                            <Sequence DisplayName="[807611073] Ignored Activities" sap:VirtualizedContainerService.HintSize="200,99" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </rac:CommentOut.Body>
+                        </rac:CommentOut>
+                        <rac:CommentOut DisplayName="[807613083] Comment Out" sap:VirtualizedContainerService.HintSize="416,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                          <rac:CommentOut.Body>
+                            <Sequence DisplayName="[807615094] Ignored Activities" sap:VirtualizedContainerService.HintSize="486,331" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If Condition="[injectContent = &quot;&quot;]" DisplayName="[807617073] If" sap:VirtualizedContainerService.HintSize="464,207" sap2010:WorkflowViewState.IdRef="If_1">
+                                <If.Then>
+                                  <rab:InjectJs Browser="{x:Null}" LastElement="{x:Null}" LastLocator="{x:Null}" ContinueOnError="False" DisplayName="[807621078] Inject Javascript(B)" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="InjectJs_2" ScriptCode="[&quot;function getData(){try {var elephant = document.querySelector('#safecode');var imgCanvas = document.createElement(&quot;&quot;canvas&quot;&quot;),imgContext = imgCanvas.getContext(&quot;&quot;2d&quot;&quot;);imgCanvas.width = elephant.width;imgCanvas.height = elephant.height;imgContext.drawImage(elephant, 0, 0, elephant.width, elephant.height); return imgCanvas.toDataURL(&quot;&quot;image/png&quot;&quot;);} catch (e) {return '';}} return getData();&quot;]" ScriptOutput="[injectContent]" />
+                                </If.Then>
+                              </If>
+                            </Sequence>
+                          </rac:CommentOut.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </rac:CommentOut>
+                        <rac:LogMessage DisplayName="[807623073] Log Message" sap:VirtualizedContainerService.HintSize="416,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;----&quot;+injectContent]" />
+                      </Sequence>
+                    </DoWhile>
+                  </Sequence>
+                </rac:CommentOut.Body>
+              </rac:CommentOut>
+              <Sequence DisplayName="[672987329] Request captcha" sap:VirtualizedContainerService.HintSize="488,2630.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Name="strCapcharAPIKey" />
+                  <Variable x:TypeArguments="x:String" Name="base64Result" />
+                  <Variable x:TypeArguments="x:String" Name="captchaPostResult" />
+                  <Variable x:TypeArguments="x:String" Name="isShowInput" />
+                  <Variable x:TypeArguments="x:String" Name="captchaResult" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign DisplayName="[672989054] Assign" sap:VirtualizedContainerService.HintSize="465.6,60.8" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[strCapcharAPIKey]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[ArrConfig("API_KEY").toString]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Assign DisplayName="[672990321] Assign" sap:VirtualizedContainerService.HintSize="465.6,60.8" sap2010:WorkflowViewState.IdRef="Assign_3">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[base64Result]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[injectContent]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <DoWhile DisplayName="[672992317] Do While" sap:VirtualizedContainerService.HintSize="465.6,604.8" sap2010:WorkflowViewState.IdRef="DoWhile_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <DoWhile.Condition>[captchaPostResult ="" or captchaPostResult.Contains("Web Server may be down")]</DoWhile.Condition>
+                  <TryCatch DisplayName="[673020514] Try Catch" sap:VirtualizedContainerService.HintSize="417.6,441.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <TryCatch.Try>
+                      <Sequence DisplayName="[673027298] Sequence" sap:VirtualizedContainerService.HintSize="222.4,209.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Delay DisplayName="[673029293] Delay" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                        <rac:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" HttpProxy="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" PasswordProxy="{x:Null}" ResourcePath="{x:Null}" StatusCode="{x:Null}" UserNameProxy="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" BodyFormat="application/xml" DisplayName="[673031285] Http Client" EndPoint="https://2captcha.com/in.php" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Result="[captchaPostResult]" TimeoutMS="30000">
+                          <rac:HttpClient.Attachments>
+                            <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                          </rac:HttpClient.Attachments>
+                          <rac:HttpClient.Cookies>
+                            <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                          </rac:HttpClient.Cookies>
+                          <rac:HttpClient.Headers>
+                            <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                          </rac:HttpClient.Headers>
+                          <rac:HttpClient.Parameters>
+                            <InArgument x:TypeArguments="x:String" x:Key="method">base64</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="key">[strCapcharAPIKey]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="body">[base64Result]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="regsense">1</InArgument>
+                          </rac:HttpClient.Parameters>
+                          <rac:HttpClient.UrlSegments>
+                            <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                          </rac:HttpClient.UrlSegments>
+                        </rac:HttpClient>
+                      </Sequence>
+                    </TryCatch.Try>
+                    <TryCatch.Catches>
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ActivityAction x:TypeArguments="s:Exception">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                          </ActivityAction.Argument>
+                          <rac:LogMessage DisplayName="[580725660] Log Message" sap:VirtualizedContainerService.HintSize="313.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[exception.Message + exception.Source]" />
+                        </ActivityAction>
+                      </Catch>
+                    </TryCatch.Catches>
+                  </TryCatch>
+                </DoWhile>
+                <rac:LogMessage DisplayName="[673033280] Log Message" sap:VirtualizedContainerService.HintSize="465.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[captchaPostResult]" />
+                <rac:LogMessage DisplayName="[673035276] Log Message" sap:VirtualizedContainerService.HintSize="465.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Start request captcha&quot;]" />
+                <Assign DisplayName="[673037234] Assign" sap:VirtualizedContainerService.HintSize="465.6,60.8" sap2010:WorkflowViewState.IdRef="Assign_4">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[captchaResult]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">CAPCHA_NOT_READY</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <While DisplayName="[673038846] While" sap:VirtualizedContainerService.HintSize="465.6,960" sap2010:WorkflowViewState.IdRef="While_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <While.Condition>[captchaResult ="CAPCHA_NOT_READY" or captchaResult= "error_captcha_unsolvable"]</While.Condition>
+                  <Sequence DisplayName="[673068193] Sequence" sap:VirtualizedContainerService.HintSize="440,800" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Delay DisplayName="[673070188] Delay" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="417.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                    <TryCatch DisplayName="[673072194] Try Catch" sap:VirtualizedContainerService.HintSize="417.6,512" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <TryCatch.Try>
+                        <Sequence DisplayName="[673079741] Sequence" sap:VirtualizedContainerService.HintSize="336,280" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <rac:LogMessage DisplayName="[673081724] Log Message" sap:VirtualizedContainerService.HintSize="313.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Captcha not ready&quot;]" />
+                          <rac:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" HttpProxy="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" PasswordProxy="{x:Null}" ResourcePath="{x:Null}" StatusCode="{x:Null}" UserNameProxy="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" BodyFormat="application/xml" DisplayName="[673083733] Get result by id" EndPoint="https://2captcha.com/res.php" sap:VirtualizedContainerService.HintSize="313.6,22.4" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="GET" Result="[captchaResult]" TimeoutMS="30000">
+                            <rac:HttpClient.Attachments>
+                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                            </rac:HttpClient.Attachments>
+                            <rac:HttpClient.Cookies>
+                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                            </rac:HttpClient.Cookies>
+                            <rac:HttpClient.Headers>
+                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                            </rac:HttpClient.Headers>
+                            <rac:HttpClient.Parameters>
+                              <InArgument x:TypeArguments="x:String" x:Key="key">[strCapcharAPIKey]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="id">[Split(captchaPostResult,"|")(1)]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="action">get</InArgument>
+                            </rac:HttpClient.Parameters>
+                            <rac:HttpClient.UrlSegments>
+                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                            </rac:HttpClient.UrlSegments>
+                          </rac:HttpClient>
+                        </Sequence>
+                      </TryCatch.Try>
+                      <TryCatch.Catches>
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ActivityAction x:TypeArguments="s:Exception">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                            </ActivityAction.Argument>
+                            <rac:LogMessage DisplayName="[635956731] Log Message" sap:VirtualizedContainerService.HintSize="313.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[exception.Message + exception.Source]" />
+                          </ActivityAction>
+                        </Catch>
+                      </TryCatch.Catches>
+                    </TryCatch>
+                    <Assign DisplayName="[673085719] Assign" sap:VirtualizedContainerService.HintSize="417.6,60.8" sap2010:WorkflowViewState.IdRef="Assign_5">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[captchaResult]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[captchaResult.Replace("OK|","")]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </While>
+                <rab:InjectJs Browser="{x:Null}" LastElement="{x:Null}" LastLocator="{x:Null}" ContinueOnError="False" DisplayName="[673087229] Inject Javascript(B)" sap:VirtualizedContainerService.HintSize="465.6,59.2" sap2010:WorkflowViewState.IdRef="InjectJs_3" ScriptCode="return $('input.captcha').length" ScriptOutput="[isShowInput]" />
+                <rac:LogMessage DisplayName="[673088717] Log Message" sap:VirtualizedContainerService.HintSize="465.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[captchaResult]" />
+                <Assign DisplayName="[026400604] Assign" sap:VirtualizedContainerService.HintSize="465.6,60.8" sap2010:WorkflowViewState.IdRef="Assign_6">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="njl:JToken">[arrConfig("captcha")]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="njl:JToken">[captchaResult]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </rab:BrowserScope.Body>
+    </rab:BrowserScope>
+  </Sequence>
+</Activity>

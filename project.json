@@ -1,0 +1,26 @@
+{
+  "Name": "Test1",
+  "Description": "Simple Process Project",
+  "ReleaseNotes": null,
+  "MainWorkflow": "Main.xaml",
+  "Dependencies": {
+    "RCA.Activities.Core": "2.2.0.1",
+    "RCA.Activities.NativeBrowser": "5.0.0",
+    "RCA.Activities.Excel": "2.1.1.0",
+    "RCA.Activities.Windows": "2.1.2.1",
+    "RCA.Activities.Captcha": "1.0.0.1",
+    "RCA.Activities.Browser": "2.2.0.1",
+    "RCA.Activities.PDFAdvance": "1.0.0"
+  },
+  "ExcludedData": [
+    "Private:*",
+    "*password*"
+  ],
+  "ToolVersion": "2.2.0.2",
+  "ProjectVersion": "0.0.0.0",
+  "PackOptions": {},
+  "RuntimeOptions": {},
+  "ProjectDirectory": "C:\\Users\\admin\\OneDrive - FPT Software\\Documents\\akaBot\\Test1",
+  "ProjectFilePath": "C:\\Users\\admin\\OneDrive - FPT Software\\Documents\\akaBot\\Test1\\project.json",
+  "ScreenshotsFolder": "C:\\Users\\admin\\OneDrive - FPT Software\\Documents\\akaBot\\Test1\\.screenshots"
+}
